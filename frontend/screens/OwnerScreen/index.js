@@ -1,3 +1,7 @@
+// import {Navigation} from 'react-native-navigation';
+// import {registerScreens} from '../../screens';
+// import {registerComponents} from '../../components';
+
 import React from "react";
 import { Platform } from "react-native";
 import {
@@ -5,70 +9,49 @@ import {
   createStackNavigator
 } from "react-navigation";
 import Main from "./Main";
-import Chat from "./Chat";
 import Review from "./Review";
 import TabBarIcon from "../../components/TabBarIcon";
 import Colors from "../../constants/Colors";
+
+// registerScreens();
+// registerComponents();
+
 
 const OwnerTabs = createBottomTabNavigator({
     Main: {
         screen: Main,
         navigationOptions: {
-          title: "비어샵 info",
+          title: "비어샵 정보",
           tabBarIcon: ({ focused }) => (
             <TabBarIcon
               focused={focused}
               name={
                 Platform.OS === "ios"
-                  ? `ios-person${focused ? "" : "-outline"}`
-                  : "md-person"
+                  ? `ios-analytics${focused ? "" : "-outline"}`
+                  : "md-analytics"
               }
             />
           )
         }
       },
-    Chat: {
-    screen: Chat,
-    navigationOptions: {
-      title: "비어샵 채팅",
-      tabBarIcon: ({ focused }) => (
-        <TabBarIcon
-          focused={focused}
-          name={
-            Platform.OS === "ios"
-              ? `ios-person${focused ? "" : "-outline"}`
-              : "md-person"
-          }
-        />
-      )
-    }
-  },
   Review: {
     screen: Review,
     navigationOptions: {
       title: "비어샵 리뷰",
       tabBarIcon: ({ focused }) => (
         <TabBarIcon
-          focused={focused}
+          focused={focused} 
           name={
             Platform.OS === "ios"
-              ? "ios-beer"
-              : "md-beer"
+              ? "ios-create"
+              : "md-create"
           }
         />
       )
     }
   },
-},
-{
-  tabBarOptions: {
-      activeTintColor: Colors.tintColor,
-  }
 }
 );
-
 export default createStackNavigator(
   { OwnerTabs }, 
-  { 
-    // headerMode: "none" ,
-  });
+);

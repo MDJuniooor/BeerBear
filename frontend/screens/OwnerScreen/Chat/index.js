@@ -2,7 +2,6 @@ import React from "react";
 import { AsyncStorage, StyleSheet, View, Button,TouchableOpacity } from "react-native";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import { Header, Left, Right, Icon} from "native-base";
-import ShopInfo from '../../../assets/BsInfo';
 
 class Chat extends React.Component {
   render() {
