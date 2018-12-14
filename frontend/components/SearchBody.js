@@ -1,32 +1,25 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { Content, ListItem, List } from "native-base";
+import { View, StyleSheet } from "react-native";
+import { Content, ListItem, List, Container, Header, Card, CardItem, Text, Body  } from "native-base";
+import BeerList from "../screens/BeerSearchScreen/BeerList";  
+import BeerInfo from "../screens/BeerSearchScreen/BeerInfo";
+import BeerReview from "../screens/BeerSearchScreen/BeerReview";
 
 class SearchBody extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     const beerData = this.props.beerData;
     return (
       <Content>
         <List style={{ backgroundColor: "white" }}>
           <ListItem itemDivider>
-            <Text>맥주명</Text>
+            <Text>검색결과</Text>
           </ListItem>
           <ListItem>
-            <Text>{beerData.name}</Text>
-          </ListItem>
-
-          <ListItem itemDivider>
-            <Text>카테고리</Text>
-          </ListItem>
-          <ListItem>
-            <Text>{beerData.category}</Text>
-          </ListItem>
-
-          <ListItem itemDivider>
-            <Text>설명</Text>
-          </ListItem>
-          <ListItem>
-            <Text>{beerData.description}</Text>
+            <BeerList beerData = {this.props.beerData}/>
           </ListItem>
         </List>
       </Content>
