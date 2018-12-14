@@ -71,7 +71,7 @@ class BeerInfo extends Component {
                 <List>
                 <ListItem Thumbnail>                   
                     <Left>
-                      <Thumbnail square source={require('../../components/catcat.jpg')}/> 
+                      <Thumbnail square source={require('../../assets/images/catcat.jpg')}/> 
                     </Left>
                     <Body>
                       <Text> {c.review1.reviewer} </Text>
