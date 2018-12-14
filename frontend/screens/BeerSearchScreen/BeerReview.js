@@ -19,7 +19,7 @@ class BeerReview extends Component {
                   <List>
                   <ListItem>                   
                     <Left>
-                        <Image source={require('../../components/catcat.jpg')} style = {styles.image}/> 
+                        <Image source={require('../../assets/images/catcat.jpg')} style = {styles.image}/> 
                     </Left>
                     <Body>
                         <View style = {styles.description}>
@@ -33,7 +33,7 @@ class BeerReview extends Component {
                   </ListItem>
                   <ListItem Thumbnail>                   
                     <Left>
-                      <Thumbnail square source={require('../../components/catcat.jpg')}/> 
+                      <Thumbnail square source={require('../../assets/images/catcat.jpg')}/> 
                     </Left>
                     <Body>
                       <Text> {c.review2.reviewer} </Text>
@@ -45,7 +45,7 @@ class BeerReview extends Component {
                   </ListItem>
                   <ListItem Thumbnail>                   
                     <Left>
-                      <Thumbnail square source={require('../../components/catcat.jpg')}/> 
+                      <Thumbnail square source={require('../../assets/images/catcat.jpg')}/> 
                     </Left>
                     <Body>
                       <Text> {c.review1.reviewer} </Text>
@@ -57,7 +57,7 @@ class BeerReview extends Component {
                   </ListItem>
                   <ListItem Thumbnail>                   
                     <Left>
-                      <Thumbnail square source={require('../../components/catcat.jpg')}/> 
+                      <Thumbnail square source={require('../../assets/images/catcat.jpg')}/> 
                     </Left>
                     <Body>
                       <Text> {c.review3.reviewer} </Text>
