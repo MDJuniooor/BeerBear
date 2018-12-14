@@ -10,7 +10,6 @@ export default BeerShop = [
         photo : "http://www.crafthans.co.kr/rolling_banner/item/ce872ea024.jpg",
         latitude : 37.535595,
         longitude : 126.992293,
-        avgRating : 4.7,
     },
     user2 = {
         id: "s456",
@@ -23,7 +22,6 @@ export default BeerShop = [
         photo : "https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/12118864_522290421272662_3296026789269643423_n.jpg?_nc_cat=102&_nc_ht=scontent-icn1-1.xx&oh=228756641ff8cdd80777155211e43351&oe=5C6A376B",
         latitude : 37.533489,
         longitude : 126.994048,
-        avgRating : 4.1,
     },
     user3 = {
         id: "s789",
@@ -36,6 +34,5 @@ export default BeerShop = [
         photo : "http://mblogthumb1.phinf.naver.net/MjAxNjEyMjBfMzUg/MDAxNDgyMjA1ODMxMjM1.yR99ihFeIYu-cAt8UYGrOyr2sK0jVIv1H6rK4zJZw1Ag.hcCZyp--E2Dedy8MwvWEIS5fodFn5Z_HzL31KKaaoBMg.JPEG.rachel2u/IMG_1625.JPG?type=w2",
         latitude : 37.562229,
         longitude : 126.926956,
-        avgRating : 3.5,
     }
 ]
