@@ -21,7 +21,7 @@ import {
   Icon,
   Tab, Tabs, TabHeading 
 } from "native-base";
-import Colors from "../../../constants/Colors";
+import Colors from "../../constants/Colors";
 
 const BeerStamp = ({ stamp }) => {
   return (
@@ -39,7 +39,7 @@ const BeerStamp = ({ stamp }) => {
 // 빈 얼굴 사진 : <Thumbnail source={require("../../../assets/images/user.jpg")} />
 class Profile extends React.Component {
   render() {
-    const c = require('../../../components/customData.json');
+    const c = require('../../components/customData.json');
     return (
       <Container>
         <Header>
