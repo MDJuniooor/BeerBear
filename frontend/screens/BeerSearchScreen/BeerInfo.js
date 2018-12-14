@@ -43,7 +43,7 @@ class BeerInfo extends Component {
           </Right>
         </Header>
           <Body>
-            <Image source = {require('../../components/beer_35424.jpg')} style={{width: 90}}/>
+            <Image source = {require('../../assets/images/beer_35424.jpg')} style={{width: 90}}/>
             <View>{star}</View>
           </Body>
           <Button light full>
