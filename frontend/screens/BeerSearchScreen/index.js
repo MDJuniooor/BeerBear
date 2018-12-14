@@ -6,8 +6,10 @@ import {
 } from "react-navigation";
 import TabBarIcon from "../../components/TabBarIcon";
 import Colors from "../../constants/Colors";
-import Favorite from "./Favorite";
+import BeerRec from "./BeerRecScreen/BeerRec";
 import Search from "./Search";
+import BeerInfo from "./BeerInfo";
+import BeerReview from "./BeerReview";
 
 const BeerSearchTabs = createBottomTabNavigator(
   {
@@ -23,10 +25,10 @@ const BeerSearchTabs = createBottomTabNavigator(
         )
       }
     },
-    Favorite: {
-      screen: Favorite,
+    BeerRec: {
+      screen: BeerRec,
       navigationOptions: {
-        title: "Favorite",
+        title: "맥주 추천",
         tabBarIcon: ({ focused }) => (
           <TabBarIcon
             focused={focused}
@@ -36,15 +38,14 @@ const BeerSearchTabs = createBottomTabNavigator(
       }
     }
   },
-  {
-    tabBarOptions: {
-      activeTintColor: Colors.tintColor
-    }
-  }
 );
+tabBarOptions: {
+    activeTintColor: Colors.tintColor
+}
+
 
 export default createStackNavigator(
-  { BeerSearchTabs }, 
+  { BeerSearchTabs },
   { 
     headerMode: "none" ,
   });

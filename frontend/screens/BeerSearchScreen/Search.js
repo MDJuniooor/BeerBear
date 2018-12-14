@@ -9,19 +9,23 @@ class Search extends Component {
     searchBeer: "",
     beerData: {}
   };
-
   beerSearch = () => {
     Keyboard.dismiss();
     const beerName = this.state.searchBeer.toLowerCase();
     this.setState({
       beerData: {
           name: this.state.searchBeer,
-          category: "라거",
-          description: "맥주내용",
-          
+          category: "IPA",
+          score : 3,
+          ibu : 78,
+          abv : "7.00%",
+          estcal : 210,
+          country : "USA",
+          brewery : "Anderson Valley Brewing Company"
       }
     });
   };
+
   renderContent = () => {
     if (this.state.beerData) {
       return (
@@ -33,6 +37,7 @@ class Search extends Component {
       alert("맥주를 찾을 수 없습니다.");
     }
   };
+
   render() {
     return (
       <Container>
