@@ -5,7 +5,56 @@ import { Ionicons, FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons
 import Button from 'react-native-button';
 import ShopInfo from '../assets/ShopInfo';
 
+import API_URL from "./assets/api";
+import React from 'react';
+import {AsyncStorage, Text, View} from 'react-native'
+ 
+export default class ShopScreen extends React.Component{
+  state = {
+    shop: null,
+  }
 
+  componentDidMount() {
+    this._getshop();
+  }
+  _getshop = async () => {
+    try {
+      const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImN1c3RvbWVyMSIsImV4cCI6MTU0NDc5MzY0MywiZW1haWwiOiIifQ.ySkWtUXxpUkZtMxy1NrOVhtZz-t9i093Q4SAEFRQiUE';
+      console.log(token);
+      fetch(`${API_URL.API_URL}/beershops/detail/${1}/`, {
+        method: "GET",
+        headers: {
+          Authorization: `JWT ${token}`
+        }
+      })
+        .then(response => response.json())
+        .then(json => {
+          this.setState({
+            shop: json
+          });
+        });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  render(){
+    const shop = this.state.shop;
+    return(
+      <View>
+       {(shop)?
+       <View>
+        <Text>{this.state.shop.name}</Text>
+        <Text>{this.state.shop.latitude}</Text>
+        <Text>{this.state.shop.longitude}</Text>
+        {console.log(shop)}
+       
+      </View>
+      : <Text>로딩중입니다.</Text>}
+      </View>
+    )
+  }
+  }
 
 
 class Review extends React.Component{
