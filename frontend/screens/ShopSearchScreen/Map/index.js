@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppRegistry, StyleSheet, Text, View, FlatList } from 'react-native';
 import MapView from 'react-native-maps';
-import ShopInfo from  '../../../assets/BSInfo';
+import ShopInfo from  '../../../assets/BsInfo';
 
 
 export default class Map extends React.Component {
