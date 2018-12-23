@@ -51,7 +51,7 @@ export default class Map extends React.Component {
           region={this.state.region }
         >
           <FlatList data={this.state.shop} renderItem= { ({item}) => 
-            <MapView.Marker coordinate={item.latitude, item.longitude} title={item.name}/> } >
+            <MapView.Marker coordinate={{latitude: item.latitude, longitude: item.longitude}} title={item.name}/> } >
           </FlatList>
           <MapView.Marker
             coordinate={{
