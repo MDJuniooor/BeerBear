@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native'
 import { Content, ListItem, List, CardItem, Card } from "native-base";
 import { Ionicons, FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons';
 import Button from 'react-native-button';
-import ShopInfo from '../assets/ShopInfo';
+import ShopInfo from  '../../../assets/BsInfo';
 
 /*
 import API_URL from "./assets/api";
