@@ -7,8 +7,8 @@ import {
 import ShopScreen from "./ShopScreen";
 import Map from "./Map";
 import { FontAwesome } from "@expo/vector-icons";
-import TabBarIcon from "../../components/TabBarIcon";
-import Colors from "../../constants/Colors";
+import TabBarIcon from "../../../components/TabBarIcon";
+import Colors from "../../../constants/Colors";
 
 const ShopSearchTabs = createBottomTabNavigator({
 
@@ -58,7 +58,7 @@ const ShopSearchTabs = createBottomTabNavigator({
 
 
 export default createStackNavigator(
-  { ShopScreenTabs }, 
+  { ShopSearchTabs }, 
   { 
     headerMode: "none" ,
   });
