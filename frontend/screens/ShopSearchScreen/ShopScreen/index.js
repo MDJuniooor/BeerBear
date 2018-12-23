@@ -8,7 +8,8 @@ import ShopInfo from '../assets/ShopInfo';
 import API_URL from "./assets/api";
 import React from 'react';
 import {AsyncStorage, Text, View} from 'react-native'
- 
+
+/*
 export default class ShopScreen extends React.Component{
   state = {
     shop: null,
@@ -55,7 +56,7 @@ export default class ShopScreen extends React.Component{
     )
   }
   }
-
+*/
 
 class Review extends React.Component{
   render(){
