@@ -1,101 +1,57 @@
 import React from "react";
+import { Platform } from "react-native";
 import {
-  AsyncStorage,
-  StyleSheet,
-  View,
-  Button,
-  TouchableOpacity,
-  Image
-} from "react-native";
-import {
-  Container,
-  Header,
-  Content,
-  Card,
-  CardItem,
-  Text,
-  Body,
-  Segment, 
-  Thumbnail,
-  Left,
-  Icon,
-  Tab, Tabs, TabHeading 
-} from "native-base";
+  createBottomTabNavigator,
+  createStackNavigator
+} from "react-navigation";
+import Coupon from "./Coupon";
+import Profile from "./Profile";
+import TabBarIcon from "../../components/TabBarIcon";
 import Colors from "../../constants/Colors";
 
-const BeerStamp = ({ stamp }) => {
-  return (
-    <CardItem>
-      {[...Array(stamp)].map((e, i) => {
-        return (
-          <View style={{marginRight:10}} key={i}>
-            <Icon style={{ fontSize: 30 }} color={Colors.tintColor} name="beer" />
-          </View>
-        );
-      })}
-    </CardItem>
-  );
-};
-// 빈 얼굴 사진 : <Thumbnail source={require("../../../assets/images/user.jpg")} />
-class Profile extends React.Component {
-  render() {
-    const c = require('../../components/customData.json');
-    return (
-      <Container>
-        <Header>
-          <Text style = {{ fontSize: 30, color: "#fff", alignContent : 'center', paddingTop : 15 }}>My Page</Text>
-        </Header>
-        <Body>
-          <Segment>
-            <Button first title = '내 쿠폰' onPress = {()=> alert("내 쿠폰")}/>
-            <Button last title = '적립하기' onPress = {()=> alert("적립하기")}/>
-          </Segment>
-        </Body>
-        <Card style = {{flex : 0, paddingHorizontal : 50}}>
-          <CardItem>
-            <Text> 스탬프 현황 </Text>
-          </CardItem>
-          <CardItem>
-            <BeerStamp stamp={c.user1.stamp} />
-            </CardItem>
-        </Card>
-        <Body>
-          <Segment>
-            <Button first title = 'My Beer' onPress = {()=> alert("My Beer")}/>
-            <Button last title = 'My Beer Shop' onPress = {()=> alert("My Beer Shop")}/>
-          </Segment>
-        </Body>
-        <Tabs style = {{paddingHorizontal : 50}}>
-            <Tab heading = {<TabHeading><Text>오늘</Text></TabHeading>}>
-              <Content>
-                <Text>{c.user1.Coupon1.shop}{c.user1.Coupon1.datetime}{"\n"}</Text>
-                <Text>{c.user1.Coupon2.shop}{c.user1.Coupon2.datetime}{"\n"}</Text>
-              </Content>
-            </Tab>
-            <Tab heading = {<TabHeading><Text>7일</Text></TabHeading>}>
-              <Content>
-
-              </Content>
-            </Tab>
-            <Tab heading = {<TabHeading><Text>30일</Text></TabHeading>}>
-              <Content>
-
-              </Content>
-            </Tab>
-        </Tabs>
-      </Container>
-    );
+const MembershipTabs = createBottomTabNavigator({
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      title: "내정보",
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === "ios"
+              ? `ios-person${focused ? "" : "-outline"}`
+              : "md-person"
+          }
+        />
+      )
+    }
+  },
+  Coupon: {
+    screen: Coupon,
+    navigationOptions: {
+      title: "쿠폰",
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === "ios"
+              ? "ios-beer"
+              : "md-beer"
+          }
+        />
+      )
+    }
+  },
+},
+{
+  tabBarOptions: {
+      activeTintColor: Colors.tintColor,
   }
 }
-// 스탬프 갯수 조절?
+);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fff"
-  }
-});
-
-export default Profile;
+export default createStackNavigator(
+  { MembershipTabs }, 
+  { 
+    headerMode: "none" ,
+  });

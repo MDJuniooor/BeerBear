@@ -8,8 +8,7 @@ import {
     Text,
     TextInput,
     Dimensions,
-    Alert,
-    Image,
+    Alert
 } from "react-native";
 const { width, height } = Dimensions.get("window");
 import UserInfo from '../../assets/UserInfo';
@@ -36,8 +35,7 @@ class SignInScreen extends React.Component {
 
         return (
             <View style={styles.container}>
-                <Image src="http://cscp2.sogang.ac.kr/CSW4010/CSW4010/UserData/BearBear.png" height="3" width="3"> </Image>
-                <Text style={{ fontSize: 14 }}>Welcome to Beer Bear :)</Text>
+                <Text style={{ fontSize: 14 }}>Welcome! Beer Bear :)</Text>
                 <View style={styles.textInputContainer}>
                     <TextInput
                         style={styles.textInput}

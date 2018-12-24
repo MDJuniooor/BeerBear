@@ -118,7 +118,7 @@ class NotificationScreen extends React.Component {
         />
         <Text>Testing</Text>
         { user ?
-        <Text>{this.state.user}</Text>
+        <Text>{this.state.user.name}</Text>
         :
         <Text>로딩중</Text>}
       </View>

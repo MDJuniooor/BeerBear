@@ -19,7 +19,7 @@ class BeerList extends Component {
                         <Text note>{c.beer.style}</Text>
                     </CardItem>
                     <CardItem cardBody button onPress={() => alert("beer info")}>
-                        <Image source = {require('../../assets/images/beer_35424.jpg')} />
+                        <Image source = {require('../../components/beer_35424.jpg')} />
                     </CardItem>
                     <CardItem>
                         <View> 

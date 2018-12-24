@@ -27,8 +27,9 @@ function signup(username, password) {
 
 // api actions
 function login(username, password) {
+  console.log(`${API_URL.API_URL}/api/auth/token/`);
   return dispatch => {
-    fetch(`${API_URL}/api/auth/token/`, {
+    fetch(`${API_URL.API_URL}/api/auth/token/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

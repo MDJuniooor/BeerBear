@@ -3,11 +3,11 @@ import { ScrollView, SafeAreaView, View, Image } from 'react-native';
 import { createDrawerNavigator, DrawerItems } from "react-navigation";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
 import HomeScreen from "../screens/HomeScreen";
-import BeerSearchScreen from "../screens/BeerSearchScreen";
+// import BeerSearchScreen from "../screens/BeerSearchScreen";
 import MembershipScreen from "../screens/MembershipScreen";
 import OwnerScreen from "../screens/OwnerScreen";
 // import BuddyMatchingScreen from "../screens/BuddyMatchingScreen";
-import ShopSearchScreen from "../screens/ShopSearchScreen";
+//import ShopSearchScreen from "../screens/ShopSearchScreen";
 import Colors from "../constants/Colors";
 import window from "../constants/Layout";
 const CustomDrawerComponent = (props) => (
@@ -51,7 +51,7 @@ export default createDrawerNavigator(
       }
     },
     BeerSearchScreen: {
-      screen: BeerSearchScreen,
+      screen: HomeScreen,
       navigationOptions: {
         header: ({ state }) => {
           return {
@@ -65,7 +65,7 @@ export default createDrawerNavigator(
       }
     },
     ShopSearchScreen: {
-      screen: ShopSearchScreen,
+      screen: HomeScreen,
       navigationOptions: {
         header: ({ state }) => {
           return {
@@ -93,7 +93,7 @@ export default createDrawerNavigator(
       }
     },
     OwnerScreen: {
-      screen: OwnerScreen,
+      screen: HomeScreen,
       navigationOptions: {
         header: ({ state }) => {
           return {
