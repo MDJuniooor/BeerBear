@@ -40,7 +40,7 @@ class Main extends React.Component{
     try {
       const token = await AsyncStorage.getItem("token");
       console.log(token);
-      fetch(`${API_URL.API_URL}/users/beershop/`, {
+      fetch(`${API_URL.API_URL}/users/ beershop/`, {
         method: "GET",
         headers: {
           Authorization: `JWT ${token}`

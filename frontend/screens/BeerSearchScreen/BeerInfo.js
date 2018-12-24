@@ -43,7 +43,7 @@ class BeerInfo extends Component {
           </Right>
         </Header>
           <Body>
-            <Image source = {require('../../assets/images/beer_35424.jpg')} style={{width: 90}}/>
+            <Image source = {require('../../components/beer_35424.jpg')} style={{width: 90}}/>
             <View>{star}</View>
           </Body>
           <Button light full>
@@ -71,7 +71,7 @@ class BeerInfo extends Component {
                 <List>
                 <ListItem Thumbnail>                   
                     <Left>
-                      <Thumbnail square source={require('../../assets/images/catcat.jpg')}/> 
+                      <Thumbnail square source={require('../../components/catcat.jpg')}/> 
                     </Left>
                     <Body>
                       <Text> {c.review1.reviewer} </Text>

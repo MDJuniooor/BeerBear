@@ -3,12 +3,14 @@ import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native'
 import { Content, ListItem, List, CardItem, Card } from "native-base";
 import { Ionicons, FontAwesome, MaterialIcons, Entypo } from '@expo/vector-icons';
 import Button from 'react-native-button';
-import ShopInfo from '../assets/ShopInfo';
+import ShopInfo from  '../../../assets/BsInfo';
 
+/*
 import API_URL from "./assets/api";
 import React from 'react';
 import {AsyncStorage, Text, View} from 'react-native'
- 
+
+
 export default class ShopScreen extends React.Component{
   state = {
     shop: null,
@@ -55,43 +57,7 @@ export default class ShopScreen extends React.Component{
     )
   }
   }
-
-
-class Review extends React.Component{
-  render(){
-    return(
-
-      <View style={{alignItems: 'center'}}>
-        <Content>
-          <List>
-            <ListItem style={{  justifyContent:'center',   }}>
-          
-              <Text>{this.props.userName}</Text>
-              <Text>{this.props.content}</Text>
-              <Text>{this.props.rate}</Text>
-              <Text>{this.props.date}</Text>
-              <Text>{this.props.rate}</Text>
-              
-              
-            </ListItem>
-
-
-      
-          </List>
-        </Content>
-        <View>
-          <Button style={{height:30, width:30}} title='리뷰 작성' >
-          </Button>
-          <Button style={{height:30, width:30}} title='리뷰 수정' >
-          </Button>
-          <Button style={{height:30, width:30}} title='리뷰 삭제' >
-          </Button>
-        </View>
-      </View>
-    );
-  }
-
-}
+*/
 
 
 
@@ -169,8 +135,7 @@ export default class ShopScreen extends React.Component {
        
           <ListItem style={{  flexDirection:'row',   }}>
             <MaterialIcons backgroundColor="transparent" color="#1FB6FF" size={30} name="rate-review" />
-            <Review userName= '홍길동' content='good' rate={5} date='12/5'>
-            </Review>
+            
             <Text>{!this.state.isLiked? 'dd': 'zz'}</Text>
           </ListItem>
       

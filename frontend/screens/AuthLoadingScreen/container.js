@@ -11,10 +11,8 @@ class Container extends Component {
   }
 
   _bootstrapAsync = async () => {
-    const userToken = await AsyncStorage.getItem("token");
-    // this.props.navigation.navigate(userToken ? "Main" : "Auth");
-    this.props.navigation.navigate("Main");
-    
+    AsyncStorage.clear();
+    this.props.navigation.navigate("Auth");    
   };
 
   render() {

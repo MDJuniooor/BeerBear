@@ -58,7 +58,7 @@ const ShopSearchTabs = createBottomTabNavigator({
 
 
 export default createStackNavigator(
-  { ShopScreenTabs }, 
+  { ShopSearchTabs }, 
   { 
     headerMode: "none" ,
   });

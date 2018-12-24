@@ -1,7 +1,8 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, FlatList } from 'react-native';
 import MapView from 'react-native-maps';
-//import ShopInfo from '../assets/ShopInfo';
+import ShopInfo from  '../../../assets/BsInfo';
+
 
 export default class Map extends React.Component {
   state={
@@ -12,6 +13,7 @@ export default class Map extends React.Component {
       longitudeDelta: 0.0421,
     },
     
+    shop: [],
     shopLat:37.533489,
     shopLong:126.994048,
     shopName:'blue55',
@@ -29,6 +31,7 @@ export default class Map extends React.Component {
         }
         this.setState({
           region: regioni,
+          shop: ShopInfo,
         })     
       }
     );
@@ -47,6 +50,9 @@ export default class Map extends React.Component {
           style={styles.map}
           region={this.state.region }
         >
+          <FlatList data={this.state.shop} renderItem= { ({item}) => 
+            <MapView.Marker coordinate={{latitude: item.latitude, longitude: item.longitude}} title={item.name}/> } >
+          </FlatList>
           <MapView.Marker
             coordinate={{
               latitude: this.state.shopLat,
