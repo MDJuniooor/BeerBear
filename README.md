@@ -1,3 +1,5 @@
+<실행 방법>
+
 - Django 서버 실행(Django v2.1.3, ngrok v2.2.8, Python v3.6.5  설치 선행됨)
 1. 커맨드 입력 : pip install pipenv (가상환경 설치)
 2. 다운받은 BeerBear\api 폴더로 이동
