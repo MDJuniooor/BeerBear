@@ -1,0 +1,23 @@
+
+{
+  "name": "크래프트한스 이태원점",
+  "username": "s123",
+  "address": {
+    "city": "서울특별시 용산구 이태원로19길 6-5",
+    "geo": {
+      "lat": "37.535595",
+      "lng": "126.992293"
+    }
+  },
+  "website": "http://www.crafthans.co.kr",
+  "avatar": "http://www.crafthans.co.kr/rolling_banner/item/ce872ea024.jpg",
+  "avatarBackground":
+    "http://www.crafthans.co.kr/rolling_banner/item/ce872ea024.jpg",
+  "tels": [
+    { "id": 1, "name": "연락처", "number": "02-749-7123" }
+  ],
+  "emails": [
+    { "id": 1, "name": "단골고객수", "email": 3 },
+    { "id": 2, "name": "고객방문수", "email": 120 }
+  ]
+}

@@ -1,0 +1,34 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+django = "*"
+pillow = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
+djangorestframework-jwt = "*"
+django-extensions = "*"
+ipython = {extras = ["notebook"]}
+numpy = "*"
+pandas = "*"
+graphviz = "*"
+pyparsing = "*"
+pydot = "*"
+pydot-ng = "*"
+django-qr-code = "*"
+django-model-utils = "*"
+
+
+[dev-packages]
+
+
+
+[requires]
+
+python_version = "3.6"

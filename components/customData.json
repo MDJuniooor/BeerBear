@@ -1,0 +1,62 @@
+{
+    "beer" : {
+        "name" : "앤더슨 밸리 홉 오틴 IPA",
+        "beerID" : 336,
+        "brewery" : "Anderson Valley Brewing Company",
+        "style" : "아메리칸 IPA(American IPA)",
+        "country" : "USA",
+        "abv" : "7.00%",
+        "ibu" : 78,
+        "estcal" : 210,
+        "score" : 3.65,
+        "star" : 3
+    },
+    "review1" : {
+        "reviewer" : "준우왕자",
+        "reviewDate" : "2018/09/25 22:34",
+        "reviewerID" : "U001",
+        "content" : "맛있었습니당"
+    },  
+    "review2" : {
+        "reviewer" : "대성왕자",
+        "reviewDate" : "2018/09/22 21:19",
+        "reviewerID" : "U003",
+        "content" : "먹을만함"
+    },
+    "review3" : {
+        "reviewer" : "세정공주",
+        "reviewDate" : "2018/08/18 18:36",
+        "reviewerID" : "U002",
+        "content" : "좋아요~!"
+    },
+    "user1" : {
+        "userID" : "b123456789",
+        "username" : "문대성",
+        "textnote" : "Beer Geek",
+        "body" : "The greatest danger for most of us is not that our aim is too high and we miss it, but that it is too low and we reach it.",
+        "Stamp" : 2,
+        "FavBeer1" :  "하이네켄" ,
+        "FavBeer2" :  "아사히" ,
+        "FavBeer3" :  "버드와이저" ,
+        "FavBeer4" :  "브루클린 라거",
+        "FavShop1" : "봉구비어",
+        "FavShop2" : "브롱스 연남점",
+        "FavShop3" : "월드비어 세계맥주",
+        "Coupon1" : {
+            "shop" : "봉구비어",
+            "datetime" : "2018-10-14 20:11"
+        },
+        "Coupon2" : {
+            "shop" : "봉구비어",
+            "datetime" : "2018-10-14 20:11"
+        },
+        "MyCoupon1" : {
+            "By" : "스탬프 12개 적립 쿠폰",
+            "datetime" : "2018-11-19 21:43:00"
+        },
+        "MyCoupon2" : {
+            "By" : "친구 매칭 리워드",
+            "datetime" : "2018-11-18 20:13:00"
+        }
+    }
+}
