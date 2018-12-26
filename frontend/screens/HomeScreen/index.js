@@ -5,10 +5,11 @@ import {
   createStackNavigator
 } from "react-navigation";
 import Main from "./Main";
-import Event from "./Event";
 import Notification from "./Notification";
+import Coupon from "./Coupon";
 import TabBarIcon from "../../components/TabBarIcon";
 import Colors from "../../constants/Colors";
+
 
 const HomeTabs = createBottomTabNavigator({
   Main: {
@@ -31,14 +32,30 @@ const HomeTabs = createBottomTabNavigator({
   Notification: {
     screen: Notification,
     navigationOptions: {
-      title: "채팅",
+      title: "스탬프적립",
       tabBarIcon: ({ focused }) => (
         <TabBarIcon
           focused={focused}
           name={
             Platform.OS === "ios"
-              ? `ios-chatbubbles${focused ? "" : "-outline"}`
-              : "md-chatbubbles"
+              ? `ios-qr-scanner${focused ? "" : "-outline"}`
+              : "md-qr-scanner"
+          }
+        />
+      )
+    }
+  },
+  Coupon: {
+    screen: Coupon,
+    navigationOptions: {
+      title: "My Coupon",
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === "ios"
+              ? `ios-card${focused ? "" : "-outline"}`
+              : "md-card"
           }
         />
       )
