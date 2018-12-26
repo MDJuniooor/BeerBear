@@ -4,7 +4,6 @@ import MainDrawerNavigator from './MainDrawerNavigator';
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
 import SignInScreen from '../screens/SignInScreen';
 
-
 const AuthStack = createStackNavigator({ SignIn: SignInScreen });
 
 export default createSwitchNavigator(

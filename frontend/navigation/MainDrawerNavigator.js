@@ -2,14 +2,16 @@ import React from "react";
 import { ScrollView, SafeAreaView, View, Image } from 'react-native';
 import { createDrawerNavigator, DrawerItems } from "react-navigation";
 import { Ionicons, FontAwesome } from "@expo/vector-icons";
+
+
 import HomeScreen from "../screens/HomeScreen";
-// import BeerSearchScreen from "../screens/BeerSearchScreen";
+import BeerSearchScreen from "../screens/BeerSearchScreen";
 import MembershipScreen from "../screens/MembershipScreen";
 import OwnerScreen from "../screens/OwnerScreen";
-// import BuddyMatchingScreen from "../screens/BuddyMatchingScreen";
-//import ShopSearchScreen from "../screens/ShopSearchScreen";
+import ShopSearchScreen from "../screens/ShopSearchScreen";
 import Colors from "../constants/Colors";
-import window from "../constants/Layout";
+import BuddyMatchingScreen from "../screens/BuddyMatchingScreen";
+//import window from "../constants/Layout";
 const CustomDrawerComponent = (props) => (
     <SafeAreaView style={{flex:1}}>
         <View style={{height:150, backgroundColor:'white', alignItems:'center',justifyContent:'center'}}>
@@ -37,7 +39,7 @@ export default createDrawerNavigator(
       }
     },
     BuddyMatchingScreen: {
-      screen: HomeScreen,
+      screen: BuddyMatchingScreen,
       navigationOptions: {
         header: ({ state }) => {
           return {
@@ -51,7 +53,7 @@ export default createDrawerNavigator(
       }
     },
     BeerSearchScreen: {
-      screen: HomeScreen,
+      screen: BeerSearchScreen,
       navigationOptions: {
         header: ({ state }) => {
           return {
@@ -65,7 +67,7 @@ export default createDrawerNavigator(
       }
     },
     ShopSearchScreen: {
-      screen: HomeScreen,
+      screen: ShopSearchScreen,
       navigationOptions: {
         header: ({ state }) => {
           return {
@@ -86,14 +88,14 @@ export default createDrawerNavigator(
             tintColor: Colors.tintColor
           };
         },
-        drawerLabel: "멤버십 관리",
+        drawerLabel: "마이페이지",
         drawerIcon: ({ tintColor }) => (
           <Ionicons name="md-card" size={17} color={tintColor} />
         )
       }
     },
     OwnerScreen: {
-      screen: HomeScreen,
+      screen: OwnerScreen,
       navigationOptions: {
         header: ({ state }) => {
           return {
