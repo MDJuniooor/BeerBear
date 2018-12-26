@@ -11,15 +11,14 @@ class SearchBody extends Component {
   }
 
   render() {
-    const beerData = this.props.beerData;
     return (
       <Content>
         <List style={{ backgroundColor: "white" }}>
           <ListItem itemDivider>
-            <Text>검색결과</Text>
+            <Text>{this.props.beerName}에 대한 검색결과</Text>
           </ListItem>
           <ListItem>
-            <BeerList beerData = {this.props.beerData}/>
+            <BeerList beerName = {this.props.beerName}/>
           </ListItem>
         </List>
       </Content>
