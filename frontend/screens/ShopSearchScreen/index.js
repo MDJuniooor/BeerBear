@@ -10,12 +10,14 @@ import { FontAwesome } from "@expo/vector-icons";
 import TabBarIcon from "../../components/TabBarIcon";
 import Colors from "../../constants/Colors";
 
-const ShopSearchTabs = createBottomTabNavigator({
+
+export const ShopSearchTabs = createStackNavigator({
 
   Map: {
     screen: Map,
     navigationOptions: {
       title: "지도",
+      
       tabBarIcon: ({ focused }) => (
         <TabBarIcon
           focused={focused}
@@ -26,13 +28,15 @@ const ShopSearchTabs = createBottomTabNavigator({
           }
         />
       )
-    }
+      
+    },
   },
 
-  Shopscreen: {
+  ShopScreen: {
     screen: ShopScreen,
     navigationOptions: {
       title: "샵",
+      
       tabBarIcon: ({ focused }) => (
         <TabBarIcon
           focused={focused}
@@ -44,17 +48,21 @@ const ShopSearchTabs = createBottomTabNavigator({
         />
 
       )
+      
     }
   },
-},
+});
 
-{
-  tabBarOptions: {
-      activeTintColor: Colors.tintColor,
-  }
-}
-);
+export const Tabs = createBottomTabNavigator({
+  Map: {
+    screen: ShopSearchTabs,
 
+  },
+  Test:{
+    screen: ShopScreen,
+  },
+
+});
 
 
 export default createStackNavigator(
