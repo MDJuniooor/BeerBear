@@ -1,59 +1,137 @@
-- Django ¼­¹ö ½ÇÇà(Django v2.1.3, ngrok v2.2.8, Python v3.6.5  ¼³Ä¡ ¼±ÇàµÊ)
-1. Ä¿¸Çµå ÀÔ·Â : pip install pipenv (°¡»óÈ¯°æ ¼³Ä¡)
-2. ´Ù¿î¹ŞÀº BeerBear\api Æú´õ·Î ÀÌµ¿
-3. Ä¿¸Çµå ÀÔ·Â : pipenv three(°¡»óÈ¯°æ »ı¼º)
-4. Ä¿¸Çµå ÀÔ·Â : pipenv shell(°¡»óÈ¯°æ Á¢¼Ó)
-5. Ä¿¸Çµå ÀÔ·Â : pipenv lock -r > requirements.txt (ÆĞÅ°Áö ÅØ½ºÆ® ÆÄÀÏ »ı¼º)
-6. Ä¿¸Çµå ÀÔ·Â : python install -r requirements.txt (ÆĞÅ°Áö ¼³Ä¡)
-7. Ä¿¸Çµå ÀÔ·Â : python manage.py runserver (¼­¹ö ½ÇÇà)
-8. Ä¿¸Çµå ÀÔ·Â : ngrok http 8000 (Àå°í ¼­¹ö url Á¢±Ù Çã¿ë)
+- Django ì„œë²„ ì‹¤í–‰(Django v2.1.3, ngrok v2.2.8, Python v3.6.5  ì„¤ì¹˜ ì„ í–‰ë¨)
+1. ì»¤ë§¨ë“œ ì…ë ¥ : pip install pipenv (ê°€ìƒí™˜ê²½ ì„¤ì¹˜)
+2. ë‹¤ìš´ë°›ì€ BeerBear\api í´ë”ë¡œ ì´ë™
+3. ì»¤ë§¨ë“œ ì…ë ¥ : pipenv three(ê°€ìƒí™˜ê²½ ìƒì„±)
+4. ì»¤ë§¨ë“œ ì…ë ¥ : pipenv shell(ê°€ìƒí™˜ê²½ ì ‘ì†)
+5. ì»¤ë§¨ë“œ ì…ë ¥ : pipenv lock -r > requirements.txt (íŒ¨í‚¤ì§€ í…ìŠ¤íŠ¸ íŒŒì¼ ìƒì„±)
+6. ì»¤ë§¨ë“œ ì…ë ¥ : python install -r requirements.txt (íŒ¨í‚¤ì§€ ì„¤ì¹˜)
+7. ì»¤ë§¨ë“œ ì…ë ¥ : python manage.py runserver (ì„œë²„ ì‹¤í–‰)
+8. ì»¤ë§¨ë“œ ì…ë ¥ : ngrok http 8000 (ì¥ê³  ì„œë²„ url ì ‘ê·¼ í—ˆìš©)
 
-- ¾ÖÇÃ¸®ÄÉÀÌ¼Ç ½ÇÇà (yarn v1.12.3, node v10.13.0 ¼³Ä¡¼±ÇàµÊ, ÇÚµåÆù¿¡ expo ¾ÖÇÃ¸®ÄÉÀÌ¼Ç ¼³Ä¡¼±ÇàµÊ)
-1. ´Ù¿î¹ŞÀº BeerBear\frontend Æú´õ·Î ÀÌµ¿
-2. Ä¿¸Çµå ÀÔ·Â : npm install (¾ÛÀÌ ¿ä±¸ÇÏ´Â dependencies ¼³Ä¡)
-3. Ä¿¸Çµå ÀÔ·Â : expo start
-4. ÆË¾÷µÇ´Â Metro Bundler¿¡¼­ "Tunnel ready" ¸Ş½ÃÁö È®ÀÎ ÈÄ Connection ÅÇ¿¡¼­ "Tunnel" ¼±ÅÃ
-5. Ãâ·ÂµÈ qrÄÚµå¸¦ ÇÚµåÆù expo ¾ÖÇÃ¸®ÄÉÀÌ¼Ç¿¡¼­ ½ºÄµ
+- ì• í”Œë¦¬ì¼€ì´ì…˜ ì‹¤í–‰ (yarn v1.12.3, node v10.13.0 ì„¤ì¹˜ì„ í–‰ë¨, í•¸ë“œí°ì— expo ì• í”Œë¦¬ì¼€ì´ì…˜ ì„¤ì¹˜ì„ í–‰ë¨)
+1. ë‹¤ìš´ë°›ì€ BeerBear\frontend í´ë”ë¡œ ì´ë™
+2. ì»¤ë§¨ë“œ ì…ë ¥ : npm install (ì•±ì´ ìš”êµ¬í•˜ëŠ” dependencies ì„¤ì¹˜)
+3. ì»¤ë§¨ë“œ ì…ë ¥ : expo start
+4. íŒì—…ë˜ëŠ” Metro Bundlerì—ì„œ "Tunnel ready" ë©”ì‹œì§€ í™•ì¸ í›„ Connection íƒ­ì—ì„œ "Tunnel" ì„ íƒ
+5. ì¶œë ¥ëœ qrì½”ë“œë¥¼ í•¸ë“œí° expo ì• í”Œë¦¬ì¼€ì´ì…˜ì—ì„œ ìŠ¤ìº”
 
--Django ¼­¹ö testing (Django server url ÆĞ½º ¿ä±¸)
-url ÆĞ½º¿¡ /admin Ãß°¡, login id : customer1~5, password : anseotjdÀ¸·Î Á¢¼Ó
-±âº» url ÆĞ½º¿¡ ¾Æ·¡ ÆĞ½º Ãß°¡ÇÏ¿© ½ÇÇà
-/beers/?q=${keyword}/ -> ¸ÆÁÖ Å°¿öµå °Ë»ö
-/beers/recommend/ -> ¸ÆÁÖ ÃßÃµ
-/beers/detail/${beer_id}/ -> ¸ÆÁÖ »ó¼¼Á¤º¸ °Ë»ö
-/beers/comments/${beer_id}/ -> ¸ÆÁÖ ¸®ºä ´õº¸±â 
-/beers/favorite/${beer_id}/ -> ³»°¡ ÂòÇÑ ¸ÆÁÖ ¸®½ºÆ® ºÒ·¯¿À±â
-/beers/review/${beer_id}/ -> ÇØ´ç ¸ÆÁÖ ¸®ºä ¸®½ºÆ® ºÒ·¯¿À±â
-/beers/review/${beer_id}/create/ -> ÇØ´ç ¸ÆÁÖ ¸®ºä ¸¸µé±â
-/beers/review/${beer_id}/delete/${review_id}/ -> ÇØ´ç ¸ÆÁÖ ¸®ºä »èÁ¦
+-Django ì„œë²„ testing (Django server url íŒ¨ìŠ¤ ìš”êµ¬)
+url íŒ¨ìŠ¤ì— /admin ì¶”ê°€, login id : customer1~5, password : anseotjdìœ¼ë¡œ ì ‘ì†
+ê¸°ë³¸ url íŒ¨ìŠ¤ì— ì•„ë˜ íŒ¨ìŠ¤ ì¶”ê°€í•˜ì—¬ ì‹¤í–‰
+/beers/?q=${keyword}/ -> ë§¥ì£¼ í‚¤ì›Œë“œ ê²€ìƒ‰
+/beers/recommend/ -> ë§¥ì£¼ ì¶”ì²œ
+/beers/detail/${beer_id}/ -> ë§¥ì£¼ ìƒì„¸ì •ë³´ ê²€ìƒ‰
+/beers/comments/${beer_id}/ -> ë§¥ì£¼ ë¦¬ë·° ë”ë³´ê¸° 
+/beers/favorite/${beer_id}/ -> ë‚´ê°€ ì°œí•œ ë§¥ì£¼ ë¦¬ìŠ¤íŠ¸ ë¶ˆëŸ¬ì˜¤ê¸°
+/beers/review/${beer_id}/ -> í•´ë‹¹ ë§¥ì£¼ ë¦¬ë·° ë¦¬ìŠ¤íŠ¸ ë¶ˆëŸ¬ì˜¤ê¸°
+/beers/review/${beer_id}/create/ -> í•´ë‹¹ ë§¥ì£¼ ë¦¬ë·° ë§Œë“¤ê¸°
+/beers/review/${beer_id}/delete/${review_id}/ -> í•´ë‹¹ ë§¥ì£¼ ë¦¬ë·° ì‚­ì œ
 
-/beershops/?lat=${lat}&lon=${lon} -> À§Ä¡ ±â¹İ ºñ¾î¼¥ °Ë»ö
-/beershops/search/${beer_id}/ -> ºñ¾î ±â¹İ ºñ¾î˜Ş
-/beershops/detail/${beerShop_id} -> ÇØ´ç ºñ¾î¼¥ »ó¼¼Á¤º¸ º¸±â
-/beershops/favorite/${beerShop_id}/ -> ÇØ´ç ºñ¾î¼¥ ´Ü°ñ ¸®½ºÆ® ºÒ·¯¿À±â
-/beershops/review/${beerShop_id}/ -> ÇØ´ç ºñ¾î˜Ş ¸®ºä ¸®½ºÆ® ºÒ·¯¿À±â
-/beershops/review/${beerShop_id}/create/ -> ÇØ´ç ºñ¾î˜Ş ¸®ºä ¸¸µé±â
-/beershops/review/${beerShop_id}/create/${parent_id}/ -> ÇØ´ç ºñ¾î˜Ş ¸®ºäÀÇ ¸®ºä ¸¸µé±â
-/beershops/review/${beerShop_id}/delete/${review_id}/ -> ÇØ´ç ºñ¾î˜Ş ¼±ÅÃÇÑ ¸®ºä »èÁ¦
+/beershops/?lat=${lat}&lon=${lon} -> ìœ„ì¹˜ ê¸°ë°˜ ë¹„ì–´ìƒµ ê²€ìƒ‰
+/beershops/search/${beer_id}/ -> ë¹„ì–´ ê¸°ë°˜ ë¹„ì–´ìƒµ
+/beershops/detail/${beerShop_id} -> í•´ë‹¹ ë¹„ì–´ìƒµ ìƒì„¸ì •ë³´ ë³´ê¸°
+/beershops/favorite/${beerShop_id}/ -> í•´ë‹¹ ë¹„ì–´ìƒµ ë‹¨ê³¨ ë¦¬ìŠ¤íŠ¸ ë¶ˆëŸ¬ì˜¤ê¸°
+/beershops/review/${beerShop_id}/ -> í•´ë‹¹ ë¹„ì–´ìƒµ ë¦¬ë·° ë¦¬ìŠ¤íŠ¸ ë¶ˆëŸ¬ì˜¤ê¸°
+/beershops/review/${beerShop_id}/create/ -> í•´ë‹¹ ë¹„ì–´ìƒµ ë¦¬ë·° ë§Œë“¤ê¸°
+/beershops/review/${beerShop_id}/create/${parent_id}/ -> í•´ë‹¹ ë¹„ì–´ìƒµ ë¦¬ë·°ì˜ ë¦¬ë·° ë§Œë“¤ê¸°
+/beershops/review/${beerShop_id}/delete/${review_id}/ -> í•´ë‹¹ ë¹„ì–´ìƒµ ì„ íƒí•œ ë¦¬ë·° ì‚­ì œ
 
-chats/matching/ -> ¸ÅÄªÄ£±¸ ºÒ·¯¿À±â
-chats/customer/${customer_id}/ -> ¼±ÅÃµÈ Ä£±¸ »ó¼¼ Á¤º¸ ºÒ·¯¿À±â
-/addbuddy/${buddy_id}/ -> ¼±ÅÃµÈ Ä£±¸¿¡°Ô ´ëÈ­½ÅÃ»ÇÏ±â
-/approve/${buddy_id}/ -> ´ëÈ­½ÅÃ»ÇÑ Ä£±¸¿Í ½ÂÀÎÇÏ¿© Ãª·ë »ı¼º
-/chatroom/ -> Ã¤ÆÃ¹æ ¸ñ·Ï ºÒ·¯¿À±â
-/chatroom/${chat_id}/  -> ¼±ÅÃµÈ Ã¤ÆÃ¹æ ¸Ş½ÃÁö ÀüºÎ ºÒ·¯¿À±â
-/chatroom/${chat_id}/message/ -> ¸Ş½ÃÁö Àü¼Û
-/chatroom/${chat_id}/ -> ÇıÅÃ ¹Ş±â
+chats/matching/ -> ë§¤ì¹­ì¹œêµ¬ ë¶ˆëŸ¬ì˜¤ê¸°
+chats/customer/${customer_id}/ -> ì„ íƒëœ ì¹œêµ¬ ìƒì„¸ ì •ë³´ ë¶ˆëŸ¬ì˜¤ê¸°
+/addbuddy/${buddy_id}/ -> ì„ íƒëœ ì¹œêµ¬ì—ê²Œ ëŒ€í™”ì‹ ì²­í•˜ê¸°
+/approve/${buddy_id}/ -> ëŒ€í™”ì‹ ì²­í•œ ì¹œêµ¬ì™€ ìŠ¹ì¸í•˜ì—¬ ì±—ë£¸ ìƒì„±
+/chatroom/ -> ì±„íŒ…ë°© ëª©ë¡ ë¶ˆëŸ¬ì˜¤ê¸°
+/chatroom/${chat_id}/  -> ì„ íƒëœ ì±„íŒ…ë°© ë©”ì‹œì§€ ì „ë¶€ ë¶ˆëŸ¬ì˜¤ê¸°
+/chatroom/${chat_id}/message/ -> ë©”ì‹œì§€ ì „ì†¡
+/chatroom/${chat_id}/ -> í˜œíƒ ë°›ê¸°
 
-/users/profile/ -> À¯Àú Á¤º¸ ºÒ·¯¿À±â
-/users/addstamp/${customer_id}/ -> ½ºÅÆÇÁ Ãß°¡ÇÏ±â
-/users/coupon/ -> ³» ÄíÆù ¸®½ºÆ® º¸±â
-/users/coupon/${coupon_id} -> ¼±ÅÃµÈ ÄíÆù Å¥¾ËÄÚµå º¸¿©ÁÖ±â
+/users/profile/ -> ìœ ì € ì •ë³´ ë¶ˆëŸ¬ì˜¤ê¸°
+/users/addstamp/${customer_id}/ -> ìŠ¤íƒ¬í”„ ì¶”ê°€í•˜ê¸°
+/users/coupon/ -> ë‚´ ì¿ í° ë¦¬ìŠ¤íŠ¸ ë³´ê¸°
+/users/coupon/${coupon_id} -> ì„ íƒëœ ì¿ í° íì•Œì½”ë“œ ë³´ì—¬ì£¼ê¸°
 
-/users/beershop/ -> °ü¸®ÇÏ´Â ºñ¾î˜Ş Á¤º¸ ºÒ·¯¿À±â
-/users/beershop/review/ -> °ü¸®ÇÏ´Â ºñ¾î˜Ş ¸®ºä º¸±â
-/users/beershop/review/${review_id}/ -> ÇØ´ç ¸®ºä ´ä±Û ´Ş±â 
-/users/beershop/review/${review_id}/update/ -> ³»°¡ ¾´ ´ä±Û ¼öÁ¤
-/users/beershop/review/${review_id}/${reply_id}/delete/ -> ¼±ÅÃµÈ ´ä±Û »èÁ¦
+/users/beershop/ -> ê´€ë¦¬í•˜ëŠ” ë¹„ì–´ìƒµ ì •ë³´ ë¶ˆëŸ¬ì˜¤ê¸°
+/users/beershop/review/ -> ê´€ë¦¬í•˜ëŠ” ë¹„ì–´ìƒµ ë¦¬ë·° ë³´ê¸°
+/users/beershop/review/${review_id}/ -> í•´ë‹¹ ë¦¬ë·° ë‹µê¸€ ë‹¬ê¸° 
+/users/beershop/review/${review_id}/update/ -> ë‚´ê°€ ì“´ ë‹µê¸€ ìˆ˜ì •
+/users/beershop/review/${review_id}/${reply_id}/delete/ -> ì„ íƒëœ ë‹µê¸€ ì‚­ì œ
 
-(ÄÚµå È®ÀÎ½Ã º°µµÀÇ code editor ¼³Ä¡ ¼±ÇàµÊ)
+(ì½”ë“œ í™•ì¸ì‹œ ë³„ë„ì˜ code editor ì„¤ì¹˜ ì„ í–‰ë¨)
+
+-Django dependencies
+backcall==0.1.0
+bleach==3.0.2
+decorator==4.3.0
+defusedxml==0.5.0
+django-extensions==2.1.4
+django-filter==2.0.0
+django-model-utils==3.1.2
+django-qr-code==1.0.0
+django==2.1.3
+djangorestframework-jwt==1.11.0
+djangorestframework==3.9.0
+entrypoints==0.2.3
+graphviz==0.10.1
+ipykernel==5.1.0
+ipython-genutils==0.2.0
+ipython==7.2.0
+ipywidgets==7.4.2
+jedi==0.13.1
+jinja2==2.10
+jsonschema==2.6.0
+jupyter-client==5.2.3
+jupyter-core==4.4.0
+markdown==3.0.1
+markupsafe==1.1.0
+mistune==0.8.4
+nbconvert==5.4.0
+nbformat==4.4.0
+notebook==5.7.2
+numpy==1.15.4
+pandas==0.23.4
+pandocfilters==1.4.2
+parso==0.3.1
+pickleshare==0.7.5
+pillow==5.3.0
+prometheus-client==0.4.2
+prompt-toolkit==2.0.7
+pygments==2.3.0
+pyjwt==1.6.4
+pyparsing==2.3.0
+python-dateutil==2.7.5
+pytz==2018.7
+pyzmq==17.1.2
+qrcode==6.0
+send2trash==1.5.0
+six==1.11.0
+terminado==0.8.1
+traitlets==4.3.2
+wcwidth==0.1.7
+webencodings==0.5.1
+
+- react-native Dependencies
+"@expo/samples": "2.1.1",
+"axios": "^0.18.0",
+"expo": "^30.0.1",
+"link": "^0.1.5",
+"native-base": "^2.8.1",
+"react": "^16.3.1",
+"react-dom": "^16.6.3",
+"react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+"react-native-button": "^2.3.0",
+"react-native-comments": "^1.1.1",
+"react-native-elements": "^1.0.0-beta7",
+"react-native-gifted-chat": "^0.5.0",
+"react-native-maps": "^0.22.1",
+"react-native-navigation": "^2.2.0",
+"react-native-router-flux": "^4.0.6",
+"react-native-vector-icons": "^6.1.0",
+"react-navigation": "^2.18.3",
+"react-redux": "^5.0.7",
+"redux": "^4.0.0",
+"redux-persist": "^5.10.0",
+"redux-thunk": "^2.3.0",
+"semantic-ui": "^2.4.2",
+"semantic-ui-react": "^0.83.0",
+"util": "^0.11.1"
+"jest-expo": "30.0.0"
