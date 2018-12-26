@@ -9,6 +9,7 @@
 6. 커맨드 입력 : python install -r requirements.txt (패키지 설치)
 7. 커맨드 입력 : python manage.py runserver (서버 실행)
 8. 커맨드 입력 : ngrok http 8000 (장고 서버 url 접근 허용)
+
 (Django dependencies)
 backcall==0.1.0
 bleach==3.0.2
@@ -59,6 +60,9 @@ terminado==0.8.1
 traitlets==4.3.2
 wcwidth==0.1.7
 webencodings==0.5.1
+
+
+
 -Django 서버 testing (Django server url 패스 요구)
 url 패스에 /admin 추가, login id : customer1~5, password : anseotjd으로 접속
 기본 url 패스에 아래 패스 추가하여 실행
