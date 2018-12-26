@@ -69,6 +69,7 @@ webencodings==0.5.1
 url 패스에 /admin 추가, login id : customer1~5, password : anseotjd으로 접속
 기본 url 패스에 아래 패스 추가하여 실행
 
+
 /beers/?q=${keyword}/ -> 맥주 키워드 검색
 /beers/recommend/ -> 맥주 추천
 /beers/detail/${beer_id}/ -> 맥주 상세정보 검색
