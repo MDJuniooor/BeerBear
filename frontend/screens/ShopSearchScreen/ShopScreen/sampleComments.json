@@ -1,0 +1,80 @@
+[
+  {
+    "parentId": null,
+    "commentId": 1,
+    "name": "크래프트한스 이태원점",
+    "liked": true,
+    "reported": false,
+    "likes": [
+
+    ],
+    "email": "혜민스님",
+    "created_at": "2017-12-23 14:45:06",
+    "body": "가장 좋아하는 비어샵!\n 사장님 친절하시고 분위기 넘 좋습니다.",
+    "children": [
+      {
+        "parentId": 1,
+        "commentId": 2,
+        "name": "크래프트한스 이태원점",
+        "created_at": "2017-12-23 14:45:06",
+        "liked": true,
+        "reported": false,
+        "likes": [
+
+        ],
+        "email": "크래프트한스 이태원점",
+        "body": "감사합니다. 더욱 좋은 모습으로 보답하겠습니다."
+      }
+    ]
+  },
+  {
+    "parentId": null,
+    "commentId": 3,
+    "name": "크래프트한스 이태원점",
+    "liked": true,
+    "reported": false,
+    "likes": [
+    ],
+    "email": "세정비데",
+    "created_at": "2017-12-23 14:45:06",
+    "body": "적당히 맛있었습니다.\n담에 친구들과 다시올게요!"
+  },
+  {
+    "parentId": null,
+    "commentId": 2,
+    "name": "크래프트한스 이태원점",
+    "liked": true,
+    "reported": false,
+    "likes": [
+    ],
+    "email": "재현둥이",
+    "created_at": "2017-12-23 14:45:06",
+    "body": "페일에일 완전 맛있어요!! "
+  },
+  {
+    "parentId": null,
+    "commentId": 25,
+    "name": "크래프트한스 이태원점",
+    "liked": true,
+    "reported": false,
+    "likes": [
+
+    ],
+    "email": "주누준우",
+    "created_at": "2017-12-23 14:45:06",
+    "body": "분위기가 넘 좋아요.\n또 올게요~~"
+  },
+  {
+    "parentId": null,
+    "commentId": 10,
+    "name": "크래프트한스 이태원점",
+    "liked": true,
+    "reported": false,
+    "likes": [
+
+    ],
+    "email": "대성왕자",
+    "created_at": "2017-12-23 14:45:06",
+    "body": "일찍 안가면 자리 없음. 맥주 가격이 조금 과하다고 생각."
+  }
+]
