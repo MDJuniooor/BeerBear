@@ -11,6 +11,7 @@
 8. 커맨드 입력 : ngrok http 8000 (장고 서버 url 접근 허용)
 
 (Django dependencies)
+
 backcall==0.1.0
 bleach==3.0.2
 decorator==4.3.0
