@@ -1,127 +1,104 @@
-import React from "react";
+import React, { Component } from 'react';
 import {
-  AsyncStorage,
   StyleSheet,
-  View,
-  Button,
+  ListView,
   TouchableOpacity,
-  Text
-} from "react-native";
-import { Ionicons, FontAwesome } from "@expo/vector-icons";
-import API_URL from "../../../constants/Api";
+  View,
+  Image,
+  Text,
+  TouchableHighlight,
+  Animated, PanResponder,Platform, ViewPropTypes
+} from 'react-native';
+// import { Rating } from 'react-native-elements';
+//import { Rating, AirbnbRating } from 'react-native-ratings';
 
-class NotificationScreen extends React.Component {
-  state = {
-    user: null
-  };
-  componentDidMount() {
-    this._getprofile();
-  }
-  _getprofile = async () => {
-    try {
-      const token = await AsyncStorage.getItem("token");
-      console.log(token);
-      fetch(`${API_URL.API_URL}/users/profile/`, {
-        method: "GET",
-        headers: {
-          Authorization: `JWT ${token}`
-        }
-      })
-        .then(response => response.json())
-        .then(json => {
-          console.log(json);
-          this.setState({
-            user: json
-          });
-        });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  _updatefavoritebeer = async (beer_id) => {
-    try {
-      const token = await AsyncStorage.getItem("token");
-      console.log(token);
-      fetch(`${API_URL.API_URL}/beers/favorite/${beer_id}/`, {
-        method: "POST",
-        headers: {
-          Authorization: `JWT ${token}`
-        }
-      })
-        .then(response => {
-          if (response.ok == true) {
-            return true;
-          } else {
-            return false;
-          }
-        })
-        ;
-    } catch (error) {
-      console.log(error);
-    }
-  _submitbeercomment = async (beer_id, comment) => {
-    try {
-      const token = await AsyncStorage.getItem("token");
-      console.log(token);
-      fetch(`${API_URL.API_URL}/beers/review/${beer_id}/create/`, {
-        method: "POST",
-        headers: {
-          Authorization: `JWT ${token}`
-        },
-        body: JSON.stringify({
-          comment
-        })
-      }).then(response => {
-        if (response.ok == true) {
-          return true;
-        } else {
-          return false;
-        }
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
-  _deletebeercomment = async(beer_id, review_id) => {
-    try{
-      const token = await AsyncStorage.getItem("token");
-      fetch(`${API_URL.API_URL}/beers/review/${beer_id}/delete/${review_id}/`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `JWT ${token}`
-        }
-      }).then(response => {
-        if (response.ok == true) {
-          return true;
-        } else {
-          return false;
-        }
-      });
-    } catch(error){
-      console.log(error);
-    }
-  }
-  };
+
+// import {
+//   Container,
+//   Header,
+//   Content,
+//   Card,
+//   CardItem,
+//   Body,
+//   Segment, 
+//   Thumbnail,
+//   Left,
+//   Icon,
+//   Tab, Tabs, TabHeading 
+// } from "native-base";
+
+
+
+// const BeerStamp = ({ stamp }) => {
+//   return (
+//     <CardItem>
+//       {[...Array(stamp)].map((e, i) => {
+//         return (
+//           <View style={{marginRight:10}} key={i}>
+//             <Icon style={{ fontSize: 30 }} color={Colors.tintColor} name="beer" />
+//           </View>
+//         );
+//       })}
+//     </CardItem>
+//   );
+// };
+
+//const WATER_IMAGE = require('../../../assets/images/beer.png')
+
+
+export default class Congratulation extends React.Component {
+
   render() {
-    const user = this.state.user;
-    // const {user} = this.state;
-
     return (
       <View style={styles.container}>
-        <Button
-          title="정보열람"
-          onPress={() => {
-            this._getprofile();
-            console.log(this.state.user);
-          }}
-        />
-        <Text>Testing</Text>
-        { user ?
-        <Text>{this.state.user.name}</Text>
-        :
-        <Text>로딩중</Text>}
+        <Image style={styles.icon} source={{uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png"}} />
+        <Text style={styles.title}>QR코드로 쿠폰을 적립하세요!</Text>
+        <Text style={styles.description}>직원에게 QR코드를 제시하세요.</Text>
+        <TouchableHighlight style={[styles.buttonContainer, styles.loginButton]}>
+          <Text style={styles.buttonText}>스탬프 적립 횟수</Text>
+        </TouchableHighlight>
+        {/* <Card style = {{flex : 0, paddingHorizontal : 50}}>
+          <CardItem>
+            <Text> 스탬프 현황 </Text>
+          </CardItem>
+          <CardItem>
+            <BeerStamp stamp={3}/>
+            </CardItem>
+        </Card> */}
+        
+        
+        
+{/* <Rating
+          type='custom'
+          ratingImage={WATER_IMAGE}
+          ratingColor='#3498db'
+          ratingBackgroundColor='#c8c7c8'
+          ratingCount={10}
+          imageSize={30}
+          onFinishRating={this.ratingCompleted}
+          onStartRating={this.ratingStarted}
+          style={{ paddingVertical: 10 }}
+        /> */}
+      
+      <View style={styles.separator}></View>
+      <View style={styles.starContainer}>
+            <Image style={styles.star} source={require('../../../assets/images/beercp.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/beercp.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/beercp.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/beercp.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/beercp.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/beercp.png')}/>
       </View>
+      <View style={styles.starContainer}>
+            <Image style={styles.star} source={require('../../../assets/images/beercp.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/graybear.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/graybear.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/graybear.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/graybear.png')}/>
+            <Image style={styles.star} source={require('../../../assets/images/graybear.png')}/>
+      </View> 
+    </View>
     );
   }
 }
@@ -129,10 +106,58 @@ class NotificationScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "#fff"
+    backgroundColor: '#EEEEEE',
+    alignItems: 'center',
+    paddingTop:50,
+  },
+  icon:{
+    width:200,
+    height:200,
+  },
+  title:{
+    fontSize:24,
+    textAlign: 'center',
+    marginTop:22,
+    color: "#5F6D7A"
+  },
+  description: {
+    marginTop:20,
+    textAlign: 'center',
+    color: "#A9A9A9",
+    fontSize:16,
+    margin:40,
+  },
+  buttonContainer: {
+    height:45,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom:20,
+    width:"100%",
+    borderRadius:30,
+  },
+  loginButton: {
+    backgroundColor: "brown",
+  },
+  buttonText: {
+    color: "#FFFFFF",
+    fontSize:20,
+  },
+  separator:{
+    height:2,
+    backgroundColor:"#eeeeee",
+    marginTop:20,
+    marginHorizontal:30
+  },
+  starContainer:{
+    justifyContent:'center', 
+    marginHorizontal:50, 
+    flexDirection:'row', 
+    marginTop:20
+  },
+  star:{
+    width:40,
+    height:40,
   }
 });
-
-export default NotificationScreen;
+ 

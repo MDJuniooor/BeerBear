@@ -1,9 +1,11 @@
 import React from "react";
-import { StyleSheet, View, Image } from "react-native";
-import { Ionicons, FontAwesome } from "@expo/vector-icons";
-import { Header, Left, Right, Icon } from "native-base";
+import { StyleSheet, View, Image, Text } from "react-native";
+
 
 class HomeScreen extends React.Component {
+  static navigationoption = {
+    header: null
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -16,6 +18,8 @@ class HomeScreen extends React.Component {
             source={require("../../../assets/images/beer.jpg")}
             style={{ flex: 1 }}
           />
+        
+          
         </View>
       </View>
     );
