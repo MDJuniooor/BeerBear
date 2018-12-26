@@ -1,7 +1,3 @@
-// import {Navigation} from 'react-native-navigation';
-// import {registerScreens} from '../../screens';
-// import {registerComponents} from '../../components';
-
 import React from "react";
 import { Platform } from "react-native";
 import {
@@ -13,8 +9,6 @@ import Review from "./Review";
 import TabBarIcon from "../../components/TabBarIcon";
 import Colors from "../../constants/Colors";
 
-// registerScreens();
-// registerComponents();
 
 
 const OwnerTabs = createBottomTabNavigator({

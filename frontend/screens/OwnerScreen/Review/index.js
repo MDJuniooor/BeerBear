@@ -12,6 +12,7 @@ import moment from "moment"
 import ShopInfo from '../../../assets/BsInfo';
 
 export default class ExampleComments extends Component {
+  
   constructor(props) {
     super(props);
     this.props = props;
@@ -223,13 +224,13 @@ export default class ExampleComments extends Component {
                 comments: comments
               });
             }}
-            //what to do when user clicks like
-            likeAction={comment => {
-              let comments = this.actions.like(this.state.comments, comment);
-              this.setState({
-                comments: comments
-              });
-            }}
+            // //what to do when user clicks like
+            // likeAction={comment => {
+            //   let comments = this.actions.like(this.state.comments, comment);
+            //   this.setState({
+            //     comments: comments
+            //   });
+            // }}
           
             //Must return promise
             paginateAction={(from_comment_id, direction, parent_comment_id) => {
