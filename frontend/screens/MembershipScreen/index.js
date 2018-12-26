@@ -4,54 +4,45 @@ import {
   createBottomTabNavigator,
   createStackNavigator
 } from "react-navigation";
-import Coupon from "./Coupon";
-import Profile from "./Profile";
+import MyBeers from "./MyBeers";
+import MyShops from "./MyShops";
 import TabBarIcon from "../../components/TabBarIcon";
-import Colors from "../../constants/Colors";
 
-const MembershipTabs = createBottomTabNavigator({
-  Profile: {
-    screen: Profile,
+const MypageTab = createBottomTabNavigator({
+    MyBeers: {
+        screen: MyBeers,
+        navigationOptions: {
+          title: "My Beers",
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon
+              focused={focused}
+              name={
+                Platform.OS === "ios"
+                  ? `ios-beer${focused ? "" : "-outline"}`
+                  : "md-beer"
+              }
+            />
+          )
+        }
+      },
+  MyShops: {
+    screen: MyShops,
     navigationOptions: {
-      title: "내정보",
+      title: "My BeerShops",
       tabBarIcon: ({ focused }) => (
         <TabBarIcon
-          focused={focused}
+          focused={focused} 
           name={
             Platform.OS === "ios"
-              ? `ios-person${focused ? "" : "-outline"}`
-              : "md-person"
+              ? "ios-thumbs-up"
+              : "md-thumbs-up"
           }
         />
       )
     }
   },
-  Coupon: {
-    screen: Coupon,
-    navigationOptions: {
-      title: "쿠폰",
-      tabBarIcon: ({ focused }) => (
-        <TabBarIcon
-          focused={focused}
-          name={
-            Platform.OS === "ios"
-              ? "ios-beer"
-              : "md-beer"
-          }
-        />
-      )
-    }
-  },
-},
-{
-  tabBarOptions: {
-      activeTintColor: Colors.tintColor,
-  }
 }
 );
-
 export default createStackNavigator(
-  { MembershipTabs }, 
-  { 
-    headerMode: "none" ,
-  });
+  { MypageTab }, 
+);
