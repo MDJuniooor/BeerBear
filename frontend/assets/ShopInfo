@@ -1,0 +1,38 @@
+export default BeerShop = [
+    user1 = {
+        id : "s123",
+        password: "123456",
+        name : "크래프트한스 이태원점",
+        customers_counting : 3,
+        address : "서울특별시 용산구 이태원로19길 6-5",
+        phone_num : "02-749-7123",
+        homepage: "http://www.crafthans.co.kr/",
+        photo : "http://www.crafthans.co.kr/rolling_banner/item/ce872ea024.jpg",
+        latitude : 37.535595,
+        longitude : 126.992293,
+    },
+    user2 = {
+        id: "s456",
+        password: "123456",
+        name : "blue55",
+        customers_counting : 8,
+        address : "서울특별시 용산구 보광로55길 3",
+        phone_num : "02-132-1422",
+        homepage: "https://www.facebook.com/blue55itawon/",
+        photo : "https://scontent-icn1-1.xx.fbcdn.net/v/t1.0-9/12118864_522290421272662_3296026789269643423_n.jpg?_nc_cat=102&_nc_ht=scontent-icn1-1.xx&oh=228756641ff8cdd80777155211e43351&oe=5C6A376B",
+        latitude : 37.533489,
+        longitude : 126.994048,
+    },
+    user3 = {
+        id: "s789",
+        password: "123456",
+        name : "크래프트한스",
+        customers_counting : 10,
+        address : "서울특별시 마포구 연희로 35",
+        phone_num : "02-132-1423",
+        homepage: "https://www.facebook.com/craftonepub/",
+        photo : "http://mblogthumb1.phinf.naver.net/MjAxNjEyMjBfMzUg/MDAxNDgyMjA1ODMxMjM1.yR99ihFeIYu-cAt8UYGrOyr2sK0jVIv1H6rK4zJZw1Ag.hcCZyp--E2Dedy8MwvWEIS5fodFn5Z_HzL31KKaaoBMg.JPEG.rachel2u/IMG_1625.JPG?type=w2",
+        latitude : 37.562229,
+        longitude : 126.926956,
+    }
+]
