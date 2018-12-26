@@ -2,61 +2,70 @@ import React from "react";
 import { Platform } from "react-native";
 import {
   createBottomTabNavigator,
-  createStackNavigator
+  createStackNavigator,
+  StackNavigator,
+  TabNavigator,
 } from "react-navigation";
 import TabBarIcon from "../../components/TabBarIcon";
 import Colors from "../../constants/Colors";
-import FriendsMatch from "./Matching";
-import Chat from "./Chat";
-import FriendsList from "./List";
+import { Icon } from 'react-native-elements';
+import Feed from "./FriendsMatch";
+import UserDetail from "./BuddyInfo";
+import Me from "./List";
 
-const BeerSearchTabs = createBottomTabNavigator(
-  {
-    FriendsMatch: {
-      screen: FriendsMatch,
-      navigationOptions: {
-        title: "Find Friends",
-        tabBarIcon: ({ focused }) => (
-          <TabBarIcon
-            focused={focused}
-            name={Platform.OS === "ios" ? "ios-search" : "md-search"}
-          />
-        )
-      }
+export const FeedStack = createStackNavigator({
+  Feed: {
+    screen: Feed,
+    navigationOptions: {
+      title: '추천 친구',
     },
-    Chat: {
-      screen: Chat,      navigationOptions: {
-        title: "Chat List",
-        tabBarIcon: ({ focused }) => (
-          <TabBarIcon
-            focused={focused}
-            name={Platform.OS === "ios" ? "ios-heart" : "md-heart"}
-          />
-        )
-      }
-    },
-    FriendsList: {
-      screen: FriendsList,
-      navigationOptions: {
-        title: "Matched Friends",
-        tabBarIcon: ({ focused }) => (
-          <TabBarIcon
-            focused={focused}
-            name={Platform.OS === "ios" ? "ios-heart" : "md-heart"}
-          />
-        )
-      }
-    }
   },
-  {
-    tabBarOptions: {
-      activeTintColor: Colors.tintColor
-    }
-  }
-);
+  Details: {
+    screen: UserDetail,
+    
+  },
+});
+
+
+
+export const Tabs = createBottomTabNavigator({
+  Feed: {
+    screen: FeedStack,
+    navigationOptions: {
+      title: '추천 친구',
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === "ios"
+              ? `ios-contacts${focused ? "" : "-outline"}`
+              : "md-contacts"
+          }
+        />
+      )
+    },
+  },
+  Me: {
+    screen: Me,
+    navigationOptions: {
+      title: '친구 요청',
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === "ios"
+              ? `ios-filing${focused ? "" : "-outline"}`
+              : "md-filing"
+          }
+        />
+      )
+    },
+  },
+});
 
 export default createStackNavigator(
-  { BeerSearchTabs }, 
+  { Tabs },
   { 
     headerMode: "none" ,
-  });
+  }
+);
