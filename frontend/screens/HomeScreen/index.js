@@ -4,45 +4,73 @@ import {
   createBottomTabNavigator,
   createStackNavigator
 } from "react-navigation";
-import MyBeers from "./MyBeers";
-import MyShops from "./MyShops";
+import Main from "./Main";
+import Notification from "./Notification";
+import Coupon from "./Coupon";
 import TabBarIcon from "../../components/TabBarIcon";
+import Colors from "../../constants/Colors";
 
-const MypageTab = createBottomTabNavigator({
-    MyBeers: {
-        screen: MyBeers,
-        navigationOptions: {
-          title: "My Beers",
-          tabBarIcon: ({ focused }) => (
-            <TabBarIcon
-              focused={focused}
-              name={
-                Platform.OS === "ios"
-                  ? `ios-beer${focused ? "" : "-outline"}`
-                  : "md-beer"
-              }
-            />
-          )
-        }
-      },
-  MyShops: {
-    screen: MyShops,
+
+const HomeTabs = createBottomTabNavigator({
+  Main: {
+    screen: Main,
     navigationOptions: {
-      title: "My BeerShops",
+      title: "홈",
       tabBarIcon: ({ focused }) => (
         <TabBarIcon
-          focused={focused} 
+          focused={focused}
           name={
             Platform.OS === "ios"
-              ? "ios-thumbs-up"
-              : "md-thumbs-up"
+              ? `ios-home${focused ? "" : "-outline"}`
+              : "md-home"
+          }
+
+        />
+      )
+    }
+  },
+  Notification: {
+    screen: Notification,
+    navigationOptions: {
+      title: "스탬프적립",
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === "ios"
+              ? `ios-qr-scanner${focused ? "" : "-outline"}`
+              : "md-qr-scanner"
           }
         />
       )
     }
   },
+  Coupon: {
+    screen: Coupon,
+    navigationOptions: {
+      title: "My Coupon",
+      tabBarIcon: ({ focused }) => (
+        <TabBarIcon
+          focused={focused}
+          name={
+            Platform.OS === "ios"
+              ? `ios-card${focused ? "" : "-outline"}`
+              : "md-card"
+          }
+        />
+      )
+    }
+  }
+},
+{
+  tabBarOptions: {
+      activeTintColor: Colors.tintColor,
+  }
 }
 );
+
 export default createStackNavigator(
-  { MypageTab }, 
-);
+  { HomeTabs }, 
+  { 
+//    headerMode: "none" ,
+  });
